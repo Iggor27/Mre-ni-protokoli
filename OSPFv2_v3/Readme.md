@@ -16,3 +16,7 @@ U samom labu oblast 50 je konfigurisana i kao stub oblast. </br>
 Osnovni zadatak stub oblasti je da spreči oglašavanje (advertisemnts) ekternih ruta, samim
 tim se smanjuje ospf baza podataka i ubrzava OSPF mreža. U našem slučaju eksterni ruter je R4. </br>
 Svi interfejsi koji su usmereni prema svičevima su pasivni interfejsi time je isključeno slanje HELLO paketa.
+
+
+<h5>Link do laba</h5>
+[Link](https://itexamanswers.net/ccnp-route-chapter-3-lab-3-2-multi-area-ospfv2-and-ospfv3-with-stub-area-version-7.html)

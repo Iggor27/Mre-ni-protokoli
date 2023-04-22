@@ -30,5 +30,10 @@ U slučaju prekida rada master rutera u vrrp grupi rezervni (backup) ruteri će 
 
 
 <h4>Simulacija prekida</h4>
-Komandom *ping 210.37.0.1 -t* u terminalu PC1 ili PC2 možemo neprekidno slati pakete preko mreže. U nekom trenutku možemo ugasiti bilo koju vezu izmedju sviča i rutera R2 ili R1 ili prekinuti vezu izmedju rutera R2 i R3 ili R1 i R3. Posmatranjem terminala možemo uočiti da  je potreban kraći period da se uspostavi ponovno slanje i da određeni deo paketa nije stigao na željenu destinaciju.</br>
+Komandom <em>ping 210.37.0.1 -t</em> u terminalu PC1 ili PC2 možemo neprekidno slati pakete preko mreže. U nekom trenutku možemo ugasiti bilo koju vezu izmedju sviča i rutera R2 ili R1 ili prekinuti vezu izmedju rutera R2 i R3 ili R1 i R3. Posmatranjem terminala možemo uočiti da  je potreban kraći period da se uspostavi ponovno slanje i da određeni deo paketa nije stigao na željenu destinaciju.</br>
 Istu simulaciju prekida možemo izvršiti i u labu-u OSPF_Compare koji se nalazi u OSPF_Load_B folderu stim što nad datom topologijom je primenjeno samo OSPF rutiranje.
+
+
+<h5>Link do laba</h5>
+[Link](https://www.matec-conferences.org/articles/matecconf/pdf/2018/87/matecconf_cas2018_03012.pdf)
+

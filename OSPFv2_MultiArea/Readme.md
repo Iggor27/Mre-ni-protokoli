@@ -1,5 +1,6 @@
 ## OSPF MultiArea
 
+U samom labu prikazana je topologija koja koristi OSPF rutiranja i podele na oblasti.
 
 <h4>Prikaz laba</h4>
 

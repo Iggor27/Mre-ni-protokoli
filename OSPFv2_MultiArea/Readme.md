@@ -4,4 +4,4 @@ U samom labu prikazana je topologija koja koristi OSPF rutiranja i podele na obl
 
 <h4>Prikaz laba</h4>
 
- ![OSF_MultiArea](https://user-images.githubusercontent.com/24782270/233786435-dcddfa50-bcb9-4af3-8882-b4e92daa9a4f.JPG)
+![OSPF_MultiArea](https://user-images.githubusercontent.com/24782270/235809840-f6d3092f-9422-4c4c-9eee-974dd7290267.png)

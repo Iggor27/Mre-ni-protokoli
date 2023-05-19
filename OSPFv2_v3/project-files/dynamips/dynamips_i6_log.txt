@@ -1,9 +1,0 @@
-Apr 18 12:21:29.584 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
-Apr 18 12:21:29.584 HYPERVISOR: Started on IP = localhost, TCP port = 49953.
-Apr 18 12:21:30.110 HYPERVISOR: exec_cmd: hypervisor version 
-Apr 18 12:21:30.110 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\igor-\OneDrive\Dokumenti\ZVT\Vezba\OSPFv2_v3\project-files\dynamips 
-Apr 18 12:21:30.110 GENERAL: working_dir=C:\Users\igor-\OneDrive\Dokumenti\ZVT\Vezba\OSPFv2_v3\project-files\dynamips
-Apr 18 12:21:30.110 HYPERVISOR: exec_cmd: ethsw create Switch2 
-Apr 18 12:21:36.646 HYPERVISOR: exec_cmd: nio create_udp udp-e94865f7-b6bf-4491-94f3-cd9b34d4c4f4 10022 127.0.0.1 10023 
-Apr 18 12:21:36.651 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-e94865f7-b6bf-4491-94f3-cd9b34d4c4f4 
-Apr 18 12:21:36.668 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-e94865f7-b6bf-4491-94f3-cd9b34d4c4f4 1 

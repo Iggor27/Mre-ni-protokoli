@@ -250,38 +250,6 @@
                     }
                 ],
                 "suspend": false
-            },
-            {
-                "filters": {},
-                "link_id": "fc1b3b9c-f383-449b-bc43-46f6c9ee03ae",
-                "link_style": {},
-                "nodes": [
-                    {
-                        "adapter_number": 1,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "s1/0",
-                            "x": 33,
-                            "y": 22
-                        },
-                        "node_id": "20c0743a-9f3b-4539-9e9f-a2536d3e80a7",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 1,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "s1/0",
-                            "x": 33,
-                            "y": 22
-                        },
-                        "node_id": "ca20a8f0-fe21-4123-b66f-e13650d92d59",
-                        "port_number": 0
-                    }
-                ],
-                "suspend": false
             }
         ],
         "nodes": [

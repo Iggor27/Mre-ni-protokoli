@@ -1,5 +1,5 @@
-# Mrežni-protokoli
-Mrežni prokoli visoke dostuponsti ***VRRP i OSPF***. <br />
-Cilj projekta je da se prikažu prednosti i mane koršćenja VRRP i OSPF protkola u slučaju nastanka različitih problema na mreži.
+# High-reliability network protocols and *VXLAN* technology
+In this repository, I created different network topologies in the GNS3 software emulator to show the convergence speed of ***OSPF*** and ***VRRP*** protocols after the ethernet link failure. </br>
+Aside from that, I configured VXLAN technology on ***VyOs*** routers serving as ***VXLAN*** endpoint (VTEP) and connected virtual machines (CentOs/RockyLinux) on different subnets to work as one cluster.
 
 

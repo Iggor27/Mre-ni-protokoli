@@ -1,39 +1,30 @@
-## VRRP (Virtualni Redudantni Protokol) </br>
+## VRRP (Virtual Router Redundancy Protocol) </br>
 
-VRRP protokol u našem labu ima dvostruku ulogu: </br>
-***1. Balansiranje opterećenja mreže*** </br>
-***2. Redudansa u slučaju prekida rada veze na mreži***
+The VRRP protocol in our lab has two different functions: </br>
+***1. Network load balancing*** </br>
+***2. Redundancy in case of network failure***
 
-<h3>Balansiranje opterećenja mreže</h3>
-Iz slike možemo uočiti da postoje dva rutera R2 i R3 nad kojim su postavljenje virtualne adrese (vip).
-Sa računara PC1 paketi se salju ruteru R1, dok PC2 salje pakete ruteru R2.
-Nad svakim računarom postavljen je izlaz na mrežu (default gateway).
+<h3>Network load balancing</h3>
+From the picture, we can see that there are two routers R2 and R3 on which the virtual address (vip) is set.
+From computer PC1, packets are sent to router R1, while PC2 sends packets to router R2.
 
-Virtualni ruteri unutar VRRP grupe imaju jedinstvenu MAC adresu: 00-00-5E-00-01-[VRID].</br>
-VRID predstavlja identitet date grupe i može imati vrednosti izmedju 0-255. Sa slike uočavamo dve VRRP grupe, grupu 1 kojoj pripada ruter R1 i grupu 2 kojoj pripada ruter R2.
-Svaka grupa ima master i backup ruter. 
-Master ruteri koriste virtualne MAC adrese koje su im dodeljene da bi odgovorili na ARP zahteve hostova. ARP zahtev uspostavlja vezu izmedju uredjaja (hostova) i mreže.
-Svakom ruteru unutar VRRP grupe se dodeljuje odgovarajući prioriteti. Ruter sa većim prioritetm postaje master ruter dok ruter sa manjim prioritetom postaje backup (rezervni ruter). </br>
-U slučaju da imamo iste prioritete u jednoj VRRP grupi posmatra se ip adresa i onaj ruter
-koji ima veću adresu postaje virtualni master ruter.
+![Vrrp](https://user-images.githubusercontent.com/24782270/233429730-c448ed4c-885b-43d7-af6f-cd6ff34f5cfd.JPG) </br></br>
 
-<h3>Redudansa u slučaju prekida rada veze na mreži</h3>
-Naš zadatak u labu je da uspešno pošaljemo pakete sa hostova na ruter R3. Ruter R3 ne pripada ni jednoj Vrrp grupi. On predstavlja vezu sa eksternom mrežom. </br>
-Podešavanjem odgovarajućih virtualnih grupa možemo obezbediti odredjen nivo redudanse.
-U slučaju prekida rada master rutera u vrrp grupi rezervni (backup) ruteri će preuziti primarnu ulogu master rutera koji je u prekidu. Protokolom VRRP omogućavamo da ne postoji način dolaska do (SPOF-a) tj. u slučaju prekida  se ne zaustavlja protok na celoj mreži. 
+Virtual routers within a VRRP group have a unique MAC address: 00-00-5E-00-01-[VRID].</br>
+VRID represents the identity of the given group and can have values ​​between 0-255. From the picture, we can see two VRRP groups, group 1 to which router R1 belongs, and Group two to which router R2 belongs.
+Each group has a master and backup router.
+Master routers use the virtual MAC addresses assigned to them to respond to ARP requests from hosts. The ARP request establishes a connection between devices (hosts) and the network.
+Each router within a VRRP group is assigned appropriate priorities. A router with a higher priority becomes the master router, while a router with a lower priority becomes a backup router. </br>
+In case we have the same priorities in one VRRP group, the IP address and that router are observed
+which has a higher address becomes the virtual master router.
+
+<h3>Redundancy in case of network failure</h3>
+The task in this lab is to send packets from hosts to router R3 successfully. Router R3 does not belong to any Vrrp group. It represents a connection to an external network. </br>
+By setting up appropriate virtual groups, we can ensure a certain level of redundancy.
+In the event of an interruption of the operation of the master router in the VRRP group, the backup routers will assume the primary role of the master router that is interrupted. With the VRRP protocol, we ensure that there is no way to reach (SPOF), in the event of an interruption, the flow of the entire network is not stopped.
 </br>
 </br>
 </br>
-
-![Vrrp](https://user-images.githubusercontent.com/24782270/233429730-c448ed4c-885b-43d7-af6f-cd6ff34f5cfd.JPG)
-
-
-
-<h4>Simulacija prekida</h4>
-Komandom <em>ping 210.37.0.1 -t</em> u terminalu PC1 ili PC2 možemo neprekidno slati pakete preko mreže. U nekom trenutku možemo ugasiti bilo koju vezu izmedju sviča i rutera R2 ili R1 ili prekinuti vezu izmedju rutera R2 i R3 ili R1 i R3. Posmatranjem terminala možemo uočiti da  je potreban kraći period da se uspostavi ponovno slanje i da određeni deo paketa nije stigao na željenu destinaciju.</br>
-Istu simulaciju prekida možemo izvršiti i u labu-u OSPF_Compare koji se nalazi u OSPF_Load_B folderu stim što nad datom topologijom je primenjeno samo OSPF rutiranje.
-
-
-<h5>Link do laba</h5>
-[Link](https://www.matec-conferences.org/articles/matecconf/pdf/2018/87/matecconf_cas2018_03012.pdf)
-
+<h4>Network packet simulations</h4>
+We can continuously send packets over the network with the command <em>ping 210.37.0.1 -t</em> on the PC1 or PC2 terminal. At some point, we can shut down any connection between the switch and router R2 or R1 or disconnect the connection between router R2 and R3 or R1 and R3. By observing the terminal, we can see that it takes a shorter period to resend and that a certain part of the package did not reach the desired destination.</br>
+We can perform the same interruption simulation in the OSPF_Compare lab, located in the OSPF_Load_B folder, as long as only OSPF routing is applied to the given topology.
